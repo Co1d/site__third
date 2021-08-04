@@ -18,6 +18,7 @@ body {
 
 .header__title {
     display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -34,7 +35,7 @@ body {
     text-align: center;
 }
 
-.first {
+.first_f {
     text-align: left;
     margin: 0;
     padding: 0;
@@ -79,13 +80,19 @@ body {
     color: #2f1059;
 }
 
+.header__phone_button:active {
+    background:#0d6efd;
+}
+
 #home {
     background: #ffffff url("../img/home.png") no-repeat scroll center center;
     background-size: cover;
 }
 
 .home__title {
+    height: 627px;
     text-align: center;
+    background: url("../img/clouud.png") no-repeat scroll 75% 15%;
 }
 
 .home__title_first {
@@ -120,14 +127,37 @@ span {
     font-weight: bold;
 }
 
+.home__block {
+    background: url("../img/Test.png") no-repeat scroll 50% 50%;
+    position: absolute;
+    bottom: 35px;
+    left: calc(50% - 390px);
+    padding-top: 25px;
+    width: 780px;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.home__block:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 779px;
+    height: 230px;
+    box-shadow: 0.8px 1.8px 79px 0 rgb(0 0 0 / 26%);
+    left: 1px;
+    top: 9px;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .home__block_text_first {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.04;
     text-align: center;
-    padding-top: 270px;
     padding-bottom: 6px;
-    /*color: #fbfafa;*/
+    color: #fbfafa;
 }
 
 .home__block_text_second {
@@ -136,22 +166,44 @@ span {
     line-height: 1.47;
     text-align: center;
     padding-bottom: 26px;
-    /*color: #ffffff;*/
+    color: #ffffff;
+}
+
+form {
+    text-align: center;
+}
+
+.person {
+    position: absolute;
+    left: 30px;
+    z-index: 5;
+    top: 125px;
+    color: rgba(0, 0, 0, 0.46);
+}
+
+.telephone {
+    position: absolute;
+    left: 274px;
+    z-index: 5;
+    top: 125px;
+    color: rgba(0, 0, 0, 0.46);
 }
 
 .home__block_input {
-    width: 201px;
-    height: 45px;
+    padding: 17px 0 19px 40px ;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.06;
     text-align: left;
     color: rgba(0, 0, 0, 0.46);
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    border: 0;
 }
 
 .home__block_button {
-    width: 274px;
-    height: 51px;
+    padding: 17px 27px 19px 27px;
     font-size: 17px;
     border-radius: 5px;
     border: none;
@@ -160,15 +212,425 @@ span {
 }
 
 .home__block_footer {
-    font-size: 16px;
+    background: url("../img/elips.png") no-repeat scroll 50% -470%;
+    text-align: center;
+    font-size: 21px;
     font-weight: 300;
     line-height: 1;
     color: #7925ec;
     padding-top: 45px;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .home__block_text-second {
     border-radius: 3px;
     border: solid 1px #7925ec;
-   margin: auto;
+    font-size: 20.5px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    align-items: center;
+    color: #7925ec;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+.circle__info {
+    display: flex;
+    text-align: center;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.circle__info_text {
+    font-family: Roboto Slab;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background: url("../img/oval.png") no-repeat scroll;
+    background-size: contain;
+    width: 153px;
+    height: 146px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.18;
+    color: #000000;
+}
+
+.circle__info_text:nth-child(1) {
+    margin-top: 195px;
+    margin-bottom: 25px;
+}
+
+.circle__info_text:nth-child(2) {
+    margin-top: 99px;
+}
+
+.circle__info_text:nth-child(3) {
+    margin-top: 47px;
+}
+
+.circle__info_text:nth-child(4) {
+    margin-top: 47px;
+}
+
+.circle__info_text:nth-child(5) {
+    margin-top: 99px;
+}
+
+.circle__info_text:nth-child(6) {
+    margin-top: 205px;
+    margin-bottom: 15px;
+}
+
+#house {
+    display: block;
+    text-align: center;
+    height: 208px;
+    color: #fbfafa;
+    background: url("../img/test__first.png") no-repeat scroll;
+    position: relative;
+}
+
+.house__title {
+    font-family: Roboto Slab;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.47;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 46px;
+}
+
+.house_title_text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.house__logo {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 2.56;
+    text-align: center;
+}
+
+.img__smile {
+    position: absolute;
+    left: calc(50% - 74px);
+    bottom: -43px;
+}
+
+.nature {
+    padding-top: 54px;
+}
+
+.nature__title {
+    font-family: Roboto Slab;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.19;
+    letter-spacing: 0.74px;
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 52px;
+}
+
+.nature__text {
+    font-family: Roboto Slab;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 2.2;
+    text-align: center;
+}
+
+.nature__photo {
+    display: flex;
+}
+
+.nature__photo_img {
+    padding-top: 30px;
+    margin-left: -15px;
+    margin-bottom: -27px;
+}
+
+.nature__photo_img_second {
+    padding-top: 55px;
+    margin-bottom: -28px;
+    margin-left: -40px;
+}
+
+.nature__photo_img_third {
+    padding-top: 30px;
+    margin-bottom: -33px;
+    margin-left: -40px;
+}
+
+.nature__photo_text {
+    font-family: RobotoSlab;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.53;
+    text-align: center;
+    margin-bottom: 88px;
+}
+
+.nature__photo_span {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#infrastructure {
+    display: block;
+    background: url("../img/fast.png") no-repeat scroll 50% -85%;
+    background-size: cover;
+}
+
+.infrastructure__title {
+    font-family: Roboto Slab;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.19;
+    letter-spacing: 0.74px;
+    text-align: center;
+    margin-bottom: 69px;
+    padding-top: 75px;
+}
+
+.infrastructure__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 93px;
+}
+
+.infrastructure__wrapper_text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.31;
+    letter-spacing: 0.32px;
+    text-align: left;
+    margin: 0;
+}
+
+.infrastructure__span {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 2.32;
+    letter-spacing: 0.38px;
+    text-align: left;
+}
+
+#line {
+    background: url("../img/volna.png") no-repeat scroll 50% 50%;
+    padding: 30px 0;
+    margin-bottom: 84px;
+}
+
+.line__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.line__circle {
+    display: flex;
+    align-items: center;
+}
+
+.line__circle_photo {
+    margin-right: 19px;
+}
+
+.line__circle_text {
+    font-size: 17px;
+    line-height: 1.18;
+    text-align: left;
+    color: #ffffff;
+}
+
+.line__circle_text_span {
+    font-weight:bold;
+}
+
+.design__logo {
+    font-family: RobotoSlab;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 51px;
+}
+
+.design__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.design__title {
+    font-family: Roboto Slab;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.design__info_text {
+    font-family: Roboto Slab;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.47;
+    text-align: left;
+    margin-top: 25px;
+    width: 301px;
+}
+
+#equipment {
+    background: url("../img/compoi.png") no-repeat scroll;
+    height: 465px;
+    margin-top: 71px;
+}
+
+.equipment__logo {
+    font-family: Roboto Slab;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.19;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 53px;
+    color: #ffffff;
+}
+
+.equipment__title {
+    font-family: Roboto Slab;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 2.32;
+    letter-spacing: 0.38px;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 40px;
+}
+
+.equipment__wrapper {
+    display: flex;
+    white-space: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.equipment__wrapper_text {
+    font-family: Roboto Slab;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.31;
+    letter-spacing: 0.32px;
+    text-align: left;
+    list-style: none;
+    color: #ffffff;
+}
+
+#document {
+    background: url("../img/title.png") no-repeat scroll 75% 55%;
+    background-size: cover;
+}
+
+.document__wrapper {
+    text-align: center;
+}
+
+.document__wrapper_title {
+    font-family: Roboto Slab;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.19;
+    text-align: center;
+    padding-top: 83px;
+}
+
+.document__wrapper_text {
+    font-family: Roboto Slab;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 2.1;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.document__photo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 78px;
+}
+
+footer {
+    background: #000000;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.footer__title {
+    font-family: Roboto Slab;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.31;
+    text-align: left;
+    width: 213px;
+    padding-top: 45px;
+    padding-bottom: 38px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer__text {
+    font-family: RobotoSlab;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: left;
+    width: 268px;
+}
+
+.footer__email {
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 0.81;
+    color: #ffffff;
+    /*text-align: right;*/
+    background: black;
+}
+
+.footer__phone_button {
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+    background-color: #000000;
+    width: 156px;
+    height: 38px;
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.21;
+    color: #ffffff;
 }
